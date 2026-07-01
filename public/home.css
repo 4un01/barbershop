@@ -7,6 +7,10 @@ body{
     background-color: #C2B3A3;
 }
 
+
+
+
+
 nav{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -52,6 +56,10 @@ nav{
     padding-right: 25px;
 }
 
+
+
+
+
 .heroSection{
     position: relative;
     height: 700px;
@@ -80,7 +88,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: black;
+    color: white;
 }
 .heroInfo h1{
     font-family: 'Archivo Black';
@@ -110,4 +118,82 @@ hr{
     width: 700px;
     border: none;
     border: 1.3px solid white;
+}
+
+
+
+
+.infoCardsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.cleanCuts{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+}
+.info{
+    margin-left: 200px;
+    margin-right: 20px;
+    height: auto;
+
+}
+.cleanCuts img{
+    height: 90%;
+}
+.cleanCuts h1{
+    font-family: 'Bebas Neue';
+}
+.cleanCuts p{
+    font-family: 'Inter';
+    width: 300px;
+}
+.fullGrooming{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 1000px;
+    height: 400px;
+}
+.fullGrooming img{
+    height: 400px;
+    
+}
+.info2{
+    width: 300px;
+}
+.info2 h1{
+    font-family: 'Bebas Neue';
+}
+.info2 p{
+    font-family: 'Inter';
+}
+#scissors{
+    transform: rotate(10deg);
+}
+.yourChair{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    width: 1500px;
+    height: 400px;
+    margin-bottom: 50px;
+}
+.yourChair img{
+    height: 400px;
+}
+.info3{
+    width: 400px;
+}
+#clippers{
+    transform: rotate(30deg);
+    margin-left: 100px;
 }
