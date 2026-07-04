@@ -226,3 +226,98 @@ nav{
     color: white;
     padding: 10px;
 }
+
+
+
+.bentoBoxContainer{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bentoBox{
+    background-color: #F2EDE4;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+.yourChair{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border-right: 6px solid #C2B3A3;
+    border-bottom: 6px solid #C2B3A3;
+}
+.yourChair img{
+    width: 264px;
+    height: 330px;
+}
+.yourChair h1{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+.cleanCuts{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 6px solid #C2B3A3;
+}
+.cleanCutsTxt {
+    width: 428px;
+    height: 100%;
+}
+.cleanCuts h1{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+    margin-top: 0;
+}
+.cleanCuts p{
+    font-family: 'inter';
+    font-weight: bold;
+    margin-top: -20px;
+}
+.cleanCuts img{
+    width: 190px;
+    height: 190px;
+    transform: rotate(200deg);
+}
+.brandPartners{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 654px;
+    border-right: 6px solid #C2B3A3;
+}
+.brandPartners h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+    width: 100%;
+}
+.brands{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: center;
+}
+.brands img{
+    width: 230px;
+    height: 129px;
+}
+#map{
+    width: 100%;
+    height: 100%;
+}
