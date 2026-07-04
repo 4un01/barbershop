@@ -99,3 +99,54 @@ nav{
     color: white;
     padding: 10px;
 }
+
+
+
+
+.ourServices{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.ourServices h1{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+}
+.child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #17150F;
+    color: white;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+.child img{
+    width: 208px;
+    height: 239px;
+}
+.child h2{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+}
+.child p{
+    font-family: 'Inter';
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: -15px;
+}
+.child button{
+    width: 150px;
+    height: fit-content;
+    background-color: #FE6E2B;
+    border: none;
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+}
