@@ -115,6 +115,12 @@ nav{
     font-family: 'Bebas Neue';
     font-size: 3em;
 }
+.haircuts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 .child{
     display: flex;
     flex-direction: column;
@@ -123,8 +129,8 @@ nav{
     background-color: #17150F;
     color: white;
     padding: 20px;
-    width: fit-content;
-    height: fit-content;
+    width: 291px;
+    height: 455px;
 }
 .child img{
     width: 208px;
@@ -141,6 +147,76 @@ nav{
     margin-top: -15px;
 }
 .child button{
+    width: 150px;
+    height: fit-content;
+    background-color: #FE6E2B;
+    border: none;
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+}
+.adult{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #17150F;
+    color: white;
+    padding: 20px;
+    width: 291px;
+    height: 455px;
+}
+.adult img{
+    width: 208px;
+    height: 239px;
+}
+.adult h2{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+}
+.adult p{
+    font-family: 'Inter';
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: -15px;
+}
+.adult button{
+    width: 150px;
+    height: fit-content;
+    background-color: #FE6E2B;
+    border: none;
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+}
+.beardAndHair{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #17150F;
+    color: white;
+    padding: 20px;
+    width: 291px;
+    height: 455px;
+}
+.beardAndHair img{
+    width: 208px;
+    height: 239px;
+}
+.beardAndHair h2{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+}
+.beardAndHair p{
+    font-family: 'Inter';
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: -15px;
+}
+.beardAndHair button{
     width: 150px;
     height: fit-content;
     background-color: #FE6E2B;
