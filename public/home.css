@@ -370,3 +370,68 @@ nav{
     font-family: 'Inter';
     font-weight: bold;
 }
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+.bigTitles{
+    width: 60%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+}
+hr{
+    border: none;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 100%;
+}
+.smallWords{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    font-size: 1.2em;
+    margin: 15px;
+}
+.terms{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.termsWriting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Bebas Neue';
+}
+.terms p{
+    font-family: 'Bebas Neue';
+    font-size: 1.2em;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2em;
+}
