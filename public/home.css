@@ -1,6 +1,6 @@
 body{
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #C2B3A3;
     display: grid;
     grid-template-columns: 1fr;
@@ -25,6 +25,35 @@ nav{
 .menu{
     display: none;
 }
+.sidebar{
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        height: 100vh;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        background-color: rgb(194, 179, 163);
+    }
+    .sidebar a{
+        text-decoration: none;
+        font-family: 'Bebas Neue';
+        color: hsl(31, 20%, 20%);
+        padding: 5px;
+    }
+    .sidebar a:hover{
+        background-color: hsl(31, 20%, 50%);
+    }
+    #closeBtn{
+        color: hsl(31, 20%, 20%);
+        margin-right: auto;
+        padding: 10px;
+        margin-bottom: 100px;
+        cursor: pointer;
+    }
 .logo{
     height: 100%;
     width: 100%;
@@ -49,6 +78,10 @@ nav{
     font-family: 'Bebas Neue';
     border-right: 4px solid hsl(31, 20%, 40%);
 }
+.pageLinks a{
+    text-decoration: none;
+    color: black;
+}
 .btnContainer{
     height: 100%;
     width: 100%;
@@ -66,6 +99,7 @@ nav{
     color: white;
     padding: 10px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 
@@ -92,7 +126,7 @@ nav{
     font-size: 3.5em;
     margin-top: -10px;
 }
-#bookBtn{
+.bookBtn{
     width: 150px;
     height: fit-content;
     background-color: #FE6E2B;
@@ -101,6 +135,7 @@ nav{
     font-size: 2em;
     color: white;
     padding: 10px;
+    cursor: pointer;
 }
 
 
@@ -123,16 +158,6 @@ nav{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-.haircutBookNow{
-    width: 150px;
-    height: fit-content;
-    background-color: #FE6E2B;
-    border: none;
-    font-family: 'Bebas Neue';
-    font-size: 2em;
-    color: white;
-    padding: 10px;
 }
 .child{
     display: flex;
@@ -428,35 +453,6 @@ hr{
     nav{
         grid-template-columns: 1fr 1fr 1fr;
         border-bottom: 2.5px solid hsl(31, 20%, 40%);
-    }
-    .sidebar{
-        position: fixed;
-        inset: 0;
-        z-index: 999;
-        height: 100vh;
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-        background-color: rgb(194, 179, 163);
-    }
-    .sidebar a{
-        text-decoration: none;
-        font-family: 'Bebas Neue';
-        color: hsl(31, 20%, 20%);
-        padding: 5px;
-    }
-    .sidebar a:hover{
-        background-color: hsl(31, 20%, 50%);
-    }
-    #closeBtn{
-        color: hsl(31, 20%, 20%);
-        margin-right: auto;
-        padding: 10px;
-        margin-bottom: 100px;
-        cursor: pointer;
     }
     .menu{
         display: flex;
