@@ -8,10 +8,6 @@ body{
 }
 
 
-
-
-
-
 nav{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -107,8 +103,6 @@ nav{
 }
 
 
-
-
 .heroSection{
     height: fit-content;
     width: 100%;
@@ -145,8 +139,6 @@ nav{
     cursor: pointer;
     text-decoration: none;
 }
-
-
 
 
 .ourServices{
@@ -289,8 +281,6 @@ nav{
 }
 
 
-
-
 .reviews{
     width: 100%;
     display: flex;
@@ -335,8 +325,6 @@ nav{
     font-family: 'Inter';
     font-weight: bold;
 }
-
-
 
 
 footer{
@@ -400,8 +388,6 @@ hr{
     gap: 20px;
     font-size: 1.2em;
 }
-
-
 
 
 @media(max-width: 768px){
