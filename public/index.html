@@ -8,63 +8,199 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
     </style>
+    <script src="https://kit.fontawesome.com/4c520ed813.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu" />
 </head>
 <body></body>
     
     <nav>
+            <div class="menu">
+                <span class="material-symbols-outlined" id="menuBtn">
+                    menu
+                </span>
+            </div>
             <div class="logo">
                 <h1>fadestore</h1>
             </div>
 
             <div class="pageLinks">
-                <p>GALLERY</p>
-                <p>ABOUT</p>
-                <p>BOOK NOW</p>
-                <p>MY BOOKINGS</p>
+                <a href="./gallery.html">GALLERY</a>
+                <a href="./about.html">ABOUT</a>
+                <a href="./book.html">BOOK NOW</a>
+                <a href="./myBookings.html">MY BOOKINGS</a>
             </div>
 
             <div class="btnContainer">
-                <button id="loginBtn">LOG IN</button>
+                <a href="./auth.html" id="loginBtn">LOG IN</a>
             </div>
     </nav>
 
     <main>
+        <div class="sidebar">
+                <span class="material-symbols-outlined" id="closeBtn">close</span>
+                <a href="./index.html">HOME</a>
+                <a href="./gallery.html">GALLERY</a>
+                <a href="./about.html">ABOUT</a>
+                <a href="./book.html">BOOK NOW</a>
+                <a href="./myBookings.html">MY BOOKINGS</a>
+        </div>
 
         <div class="heroSection">
             <h1>TRANSFORM YOUR LOOK</h1>
             <h2>THE ULTIMATE MENS GROOMING EXPERIENCE</h2>
-            <button id="bookBtn">BOOK NOW</button>
+            <a href="./book.html" class="bookBtn">BOOK NOW</a>
         </div>
 
         <div class="ourServices">
             <h1>OUR SERVICES</h1>
             <div class="haircuts">
-                <div class="child">
+                <div class="haircutOptions">
                     <img src="./images/childTaperFade.png" alt="child getting a haircut">
                     <h2>CHILDRENS CUTS</h2>
                     <p>PRICE: £10</p>
-                    <button class="haircutBookNow">BOOK NOW</button>
+                    <a href="./book.html" class="bookBtn">BOOK NOW</a>
                 </div>
 
-                <div class="adult">
+                <div class="haircutOptions">
                     <img src="./images/cleanCutz.jpg" alt="man getting a haircut">
                     <h2>ADULT CUTS</h2>
                     <p>PRICE: £20</p>
-                    <button class="haircutBookNow">BOOK NOW</button>
+                    <a href="./book.html" class="bookBtn">BOOK NOW</a>
                 </div>
 
-                <div class="beard&hair">
+                <div class="haircutOptions">
                     <img src="./images/beard trims.jpg" alt="Guy getting his beard done">
                     <h2>HAIR & BEARD</h2>
                     <p>PRICE: £25</p>
-                    <button class="haircutBookNow">BOOK NOW</button>
+                    <a href="./book.html" class="bookBtn">BOOK NOW</a>
                 </div>
             </div>
         </div>
 
+        <div class="bentoBoxContainer">
+            <div class="bentoBox">
+                <div class="yourChair">
+                    <img src="./images/yourChair.jpg" alt="barber chair">
+                    <h1>YOUR CHAIR, YOUR TIME</h1>
+                </div>
+
+                <div class="cleanCuts">
+                    <div class="cleanCutsTxt">
+                        <h1>CLEAN CUTS, EVERY SINGLE TIME</h1>
+                        <p>Every cut starts with a conversation. Before a single snip, we take the time to understand what you want and assess your face shape, hair type and the style that'll actually suit you - not just the trend of the week</p>
+                    </div>
+                    <img src="./images/scissors.png" alt="scissors">
+                </div>
+
+                <div class="brandPartners">
+                    <h1>BRANDS WE'VE PARTNERED WITH</h1>
+                    <div class="brands">
+                        <img src="./images/LOreal-Logo-6-removebg-preview.png" alt="Loreal logo">
+                        <img src="./images/mielle-removebg-preview.png" alt="Mielle logo">
+                        <img src="./images/logo_brand-olaplex.png" alt="Olaplex logo">
+                        <img src="./images/camille rose.png" alt="Camille rose logo">
+                    </div>
+                </div>
+
+                <img src="./images/map.png" alt="map image of the location of the barber shop" id="map">
+            </div>
+        </div>
+
+        <div class="reviews">
+            <h1>Reviews</h1>
+
+            <div class="cardContainer">
+                <div class="card">
+                    <h2>Best barber I've been to, hands down</h2>
+                    <p>James T says - Took the time to actually listen to what I wanted instead of just doing the usual. Walked out with the sharpest fade I've had in years. Already booked my next one.</p>
+                    <div class="starContainer">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>The one-chair setup makes all the difference</h2>
+                    <p>Marcus D says - No waiting around, no rush, just a proper cut with someone who knows what they're doing. Got my beard tidied up too and it's never looked better.</p>
+                    <div class="starContainer">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>This is definitely my regular spot now</h2>
+                    <p>Ryan P says - Booked online in about thirty seconds and the whole thing was effortless. Relaxed atmosphere, top-quality cut, and genuinely good conversation.</p>
+                    <div class="starContainer">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                        <img src="./images/star.png" alt="star">
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="bigTitles">
+            <h1>Haircut</h1>
+            <h1>Shaving</h1>
+            <h1>Beard</h1>
+            <h1>Facial</h1>
+            <h1>Braids</h1>
+        </div>
 
+        <hr>
+
+        <div class="smallWords">
+            <div class="firstSet">
+                <p>skin care</p>
+                <p>hair treatment</p>
+                <p>beard treatment</p>
+            </div>
+
+            <div class="secondSet">
+                <p>shaving (regular)</p>
+                <p>beard care</p>
+                <p>beard grooming</p>
+            </div>
+
+            <div class="thirdSet">
+                <p>mens haircut</p>
+                <p>childrens haircut</p>
+                <p>hair dye</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="terms">
+            <div class="termsWriting">
+                <p>terms</p>
+                <p>conditions</p>
+                <p>privacy</p>
+            </div>
+
+            <p>All Rights to Aun Studios©26</p>
+
+            <div class="socials">
+                <i class="fa-brands fa-facebook" style="color: #FFFF;"></i>
+                <i class="fa-brands fa-instagram" style="color: #FFFF;"></i>
+                <i class="fa-brands fa-twitter" style="color: #FFFF;"></i>
+                <i class="fa-brands fa-tiktok" style="color: #FFFF;"></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./home.js"></script>
 </body>
 </html>

@@ -1,15 +1,11 @@
 body{
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #C2B3A3;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 }
-
-
-
-
 
 
 nav{
@@ -21,6 +17,38 @@ nav{
     justify-items: center;
     align-items: center;
     border-bottom: 4px solid hsl(31, 20%, 40%);
+}
+.menu{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(194, 179, 163);
+}
+.sidebar a{
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    color: hsl(31, 20%, 20%);
+    padding: 5px;
+}
+.sidebar a:hover{
+    background-color: hsl(31, 20%, 50%);
+}
+#closeBtn{
+    color: hsl(31, 20%, 20%);
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 100px;
+    cursor: pointer;
 }
 .logo{
     height: 100%;
@@ -46,6 +74,10 @@ nav{
     font-family: 'Bebas Neue';
     border-right: 4px solid hsl(31, 20%, 40%);
 }
+.pageLinks a{
+    text-decoration: none;
+    color: black;
+}
 .btnContainer{
     height: 100%;
     width: 100%;
@@ -56,6 +88,9 @@ nav{
 #loginBtn{
     width: 150px;
     height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #17150F;
     border: none;
     font-family: 'Bebas Neue';
@@ -63,9 +98,9 @@ nav{
     color: white;
     padding: 10px;
     margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
 }
-
-
 
 
 .heroSection{
@@ -89,18 +124,21 @@ nav{
     font-size: 3.5em;
     margin-top: -10px;
 }
-#bookBtn{
+.bookBtn{
     width: 150px;
     height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FE6E2B;
     border: none;
     font-family: 'Bebas Neue';
     font-size: 2em;
     color: white;
     padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
 }
-
-
 
 
 .ourServices{
@@ -115,7 +153,27 @@ nav{
     font-family: 'Bebas Neue';
     font-size: 3em;
 }
-.child{
+.haircuts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.haircuts img{
+    width: 208px;
+    height: 239px;
+}
+.haircuts h2{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+}
+.haircuts p{
+    font-family: 'Inter';
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: -15px;
+}
+.haircutOptions{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,30 +181,382 @@ nav{
     background-color: #17150F;
     color: white;
     padding: 20px;
+    width: 291px;
+    height: 455px;
+}
+
+
+.bentoBoxContainer{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.bentoBox{
+    background-color: #F2EDE4;
     width: fit-content;
-    height: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
 }
-.child img{
-    width: 208px;
-    height: 239px;
+.yourChair{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border-right: 6px solid #C2B3A3;
+    border-bottom: 6px solid #C2B3A3;
 }
-.child h2{
+.yourChair img{
+    width: 264px;
+    height: 330px;
+}
+.yourChair h1{
     font-family: 'Bebas Neue';
     font-size: 3em;
+    width: 200px;
+    margin: 0;
+    padding: 0;
 }
-.child p{
-    font-family: 'Inter';
-    font-size: 1.5em;
+.cleanCuts{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 6px solid #C2B3A3;
+}
+.cleanCutsTxt {
+    width: 428px;
+    height: 100%;
+}
+.cleanCuts h1{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+    margin-top: 0;
+}
+.cleanCuts p{
+    font-family: 'inter';
     font-weight: bold;
-    margin-top: -15px;
+    margin-top: -20px;
 }
-.child button{
-    width: 150px;
-    height: fit-content;
+.cleanCuts img{
+    width: 190px;
+    height: 190px;
+    transform: rotate(200deg);
+}
+.brandPartners{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 654px;
+    border-right: 6px solid #C2B3A3;
+}
+.brandPartners h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+    width: 100%;
+}
+.brands{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: center;
+}
+.brands img{
+    width: 230px;
+    height: 129px;
+}
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+
+.reviews{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     background-color: #FE6E2B;
-    border: none;
+    padding-bottom: 50px;
+}
+.reviews h1{
+    font-family: 'Archivo Black';
+    font-size: 3em;
+    color: white;
+}
+.reviews img{
+    width: 55px;
+    height: 50px;
+    color: #FE6E2B;
+}
+.cardContainer{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 358px;
+    height: 300px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.card h2{
     font-family: 'Bebas Neue';
     font-size: 2em;
+}
+.card p{
+    font-family: 'Inter';
+    font-weight: bold;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
     color: white;
-    padding: 10px;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+.bigTitles{
+    width: 60%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+}
+hr{
+    border: none;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 100%;
+}
+.smallWords{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    font-size: 1.2em;
+    margin: 15px;
+}
+.terms{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.termsWriting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Bebas Neue';
+}
+.terms p{
+    font-family: 'Bebas Neue';
+    font-size: 1.2em;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2em;
+}
+
+
+@media(max-width: 768px){
+
+    nav{
+        grid-template-columns: 1fr 1fr 1fr;
+        border-bottom: 2.5px solid hsl(31, 20%, 40%);
+    }
+    .menu{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .logo {
+        font-size: 0.7em;
+        justify-content: center;
+        margin-right: 25px;
+        margin-left: none;
+        border-right: none;
+    }
+    .pageLinks{
+        display: none;
+    }
+    #loginBtn{
+        width: 50px;
+        font-size: 1em;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .heroSection h1{
+        font-size: 1.6em;
+    }
+    .heroSection h2{
+        font-size: 1.2em;
+    }
+    .bookBtn{
+        width: 61px;
+        font-size: 1em;
+        padding: 1px;
+    }
+
+    .ourServices{
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .haircuts{
+        justify-content: center;
+        gap: 20px;
+    }
+    .ourServices h1{
+        font-size: 1.5em;
+    }
+    .ourServices h2{
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+    .ourServices p{
+        font-size: 0.6em;
+    }
+    .ourServices img{
+        width: 90px;
+        height: 97px;
+    }
+    .haircutOptions{
+        padding: 5px;
+        width: 100px;
+        height: 200px;
+    }
+    
+    .bentoBoxContainer{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .bentoBox{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .yourChair{
+        border-right: 3px solid #C2B3A3;
+        border-bottom: 3px solid #C2B3A3;
+    }
+    .yourChair img{
+        width: auto;
+        height: 73px;
+    }
+    .yourChair h1{
+        font-size: 0.8em;
+        width: 50%;
+    }
+    .cleanCuts{
+        gap: 8px;
+        border-bottom: 3px solid #C2B3A3;
+    }
+    .cleanCutsTxt{
+        width: 45%;
+    }
+    .cleanCuts h1{
+        font-size: 0.8em;
+    }
+    .cleanCuts p{
+        display: none;
+    }
+    .cleanCuts img{
+        width: 60px;
+        height: 60px;
+        margin-left: -10px;
+    }
+    .brandPartners{
+        width: auto;
+        border-right: 3px solid #C2B3A3;
+    }
+    .brandPartners h1{
+        font-size: 0.8em;
+    }
+    .brands img{
+        width: 50px;
+        height: 30px;
+    }
+    #map{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .reviews {
+        padding-bottom: 20px;
+    }
+    .reviews h1{
+        font-size: 1.5em;
+    }
+    .reviews img{
+        width: 20px;
+        height: 15px;
+    }
+    .cardContainer{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+    .card{
+        width: fit-content;
+        height: fit-content;
+    }
+    .card h2{
+        font-size: 1em;
+    }
+    .card p{
+        font-size: 0.5em;
+    }
+
+    .bigTitles{
+        height: fit-content;
+        font-size: 0.5em;
+    }
+    .smallWords{
+        font-size: 0.4em;
+    }
+    .terms p{
+        font-size: 0.5em;
+    }
+    .socials{
+        font-size: 0.5em;
+    }
 }
