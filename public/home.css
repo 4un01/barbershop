@@ -26,34 +26,34 @@ nav{
     display: none;
 }
 .sidebar{
-        position: fixed;
-        inset: 0;
-        z-index: 999;
-        height: 100vh;
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-        background-color: rgb(194, 179, 163);
-    }
-    .sidebar a{
-        text-decoration: none;
-        font-family: 'Bebas Neue';
-        color: hsl(31, 20%, 20%);
-        padding: 5px;
-    }
-    .sidebar a:hover{
-        background-color: hsl(31, 20%, 50%);
-    }
-    #closeBtn{
-        color: hsl(31, 20%, 20%);
-        margin-right: auto;
-        padding: 10px;
-        margin-bottom: 100px;
-        cursor: pointer;
-    }
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(194, 179, 163);
+}
+.sidebar a{
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    color: hsl(31, 20%, 20%);
+    padding: 5px;
+}
+.sidebar a:hover{
+    background-color: hsl(31, 20%, 50%);
+}
+#closeBtn{
+    color: hsl(31, 20%, 20%);
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
 .logo{
     height: 100%;
     width: 100%;
@@ -92,6 +92,9 @@ nav{
 #loginBtn{
     width: 150px;
     height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #17150F;
     border: none;
     font-family: 'Bebas Neue';
@@ -100,6 +103,7 @@ nav{
     padding: 10px;
     margin-right: 20px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
@@ -129,6 +133,9 @@ nav{
 .bookBtn{
     width: 150px;
     height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FE6E2B;
     border: none;
     font-family: 'Bebas Neue';
@@ -136,6 +143,7 @@ nav{
     color: white;
     padding: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
@@ -159,7 +167,21 @@ nav{
     align-items: center;
     width: 100%;
 }
-.child{
+.haircuts img{
+    width: 208px;
+    height: 239px;
+}
+.haircuts h2{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+}
+.haircuts p{
+    font-family: 'Inter';
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: -15px;
+}
+.haircutOptions{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,72 +192,6 @@ nav{
     width: 291px;
     height: 455px;
 }
-.child img{
-    width: 208px;
-    height: 239px;
-}
-.child h2{
-    font-family: 'Bebas Neue';
-    font-size: 3em;
-}
-.child p{
-    font-family: 'Inter';
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: -15px;
-}
-
-.adult{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #17150F;
-    color: white;
-    padding: 20px;
-    width: 291px;
-    height: 455px;
-}
-.adult img{
-    width: 208px;
-    height: 239px;
-}
-.adult h2{
-    font-family: 'Bebas Neue';
-    font-size: 3em;
-}
-.adult p{
-    font-family: 'Inter';
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: -15px;
-}
-.beardAndHair{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #17150F;
-    color: white;
-    padding: 20px;
-    width: 291px;
-    height: 455px;
-}
-.beardAndHair img{
-    width: 208px;
-    height: 239px;
-}
-.beardAndHair h2{
-    font-family: 'Bebas Neue';
-    font-size: 3em;
-}
-.beardAndHair p{
-    font-family: 'Inter';
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: -15px;
-}
-
 
 
 .bentoBoxContainer{
@@ -486,7 +442,7 @@ hr{
     .heroSection h2{
         font-size: 1.2em;
     }
-    #bookBtn{
+    .bookBtn{
         width: 61px;
         font-size: 1em;
         padding: 1px;
@@ -510,26 +466,11 @@ hr{
     .ourServices p{
         font-size: 0.6em;
     }
-    .haircutBookNow{
-        width: 61px;
-        font-size: 1em;
-        padding: 1px;
-    }
     .ourServices img{
         width: 90px;
         height: 97px;
     }
-    .child{
-        padding: 5px;
-        width: 100px;
-        height: 200px;
-    }
-    .adult{
-        padding: 5px;
-        width: 100px;
-        height: 200px;
-    }
-    .beardAndHair{
+    .haircutOptions{
         padding: 5px;
         width: 100px;
         height: 200px;
