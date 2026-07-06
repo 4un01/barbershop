@@ -1,0 +1,64 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.loginCard{
+    width: 35%;
+    height: fit-content;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    color: white;
+    background-color: black;
+}
+.loginCard h1{
+    font-family: 'Bebas Neue';
+    font-size: 2.8em;
+}
+.loginCard p{
+    font-family: 'Inter';
+    font-weight: bold;
+    margin-top: -25px;
+    margin-bottom: 40px;
+}
+.loginCard label{
+    font-family: 'Inter';
+    font-weight: bold;
+}
+.loginCard input{
+    width: 100%;
+    height: 27px;
+    background-color: transparent;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+#login{
+    padding: 5px;
+    width: 102.5%;
+    font-family: 'Bebas Neue';
+    font-size: 1.7em;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    margin-bottom: 15px;
+}
+.loginCard span{
+    font-family: 'inter';
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.loginCard span a{
+    text-decoration: none;
+    color: #C2B3A3;
+}
