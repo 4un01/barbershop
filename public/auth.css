@@ -52,6 +52,7 @@ main{
     background-color: transparent;
     border: 2px solid white;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .loginCard span{
     font-family: 'inter';
@@ -112,6 +113,7 @@ main{
     background-color: transparent;
     border: 2px solid white;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .signupCard span{
     font-family: 'inter';

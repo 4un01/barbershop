@@ -1,6 +1,7 @@
 const signupLink = document.getElementById('signupLink')
 const loginLink = document.getElementById('loginLink')
 const signupBtn = document.getElementById('signupBtn');
+const login = document.getElementById('login');
 
 function switchCards(e){
     e.preventDefault();
@@ -51,6 +52,36 @@ async function sendSignupDetails(){
     }
 }
 
+function getloginDetails(){
+    const email = document.getElementById('email');
+    const password = document.getElementById('loginPass');
+
+    const userDetails = {
+        email: email.value,
+        password: password.value
+    };
+
+    return userDetails;
+}
+async function sendLoginDetails(){
+    const userDetails = getloginDetails();
+
+    try{
+        const response = await fetch('/auth/login', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(userDetails)
+        });
+        if(response.ok){
+            const responseTxt = await response.text();
+            alert(responseTxt);
+        }
+    }catch(e){
+        console.log(e.message);
+    }
+}
+
 signupLink.addEventListener('click', switchCards);
 loginLink.addEventListener('click', switchCards);
 signupBtn.addEventListener('click', sendSignupDetails);
+login.addEventListener('click', sendLoginDetails);

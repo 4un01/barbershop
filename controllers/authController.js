@@ -15,7 +15,7 @@ async function signupController(req, res){
         req.session.userId = user._id;
         res.status(202).send('success');
     }catch(e){
-        if(e.code === 1100){
+        if(e.code === 11000){
             res.status(409).send('email already registered');
         }else{
             console.log(e.message);
@@ -28,8 +28,9 @@ async function loginController(req, res){
     const {email, password} = req.body;
     
     try{
-        const user = await User.find({email: email, password: password});
-        if(user){
+        const exists = await User.exists({email: email, password: password});
+        if(exists){
+            const user = await User.findOne({email: email, password: password});
             req.session.userId = user._id
             res.status(200).send('exists');
         }else{
