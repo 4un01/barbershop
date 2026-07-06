@@ -1,29 +1,29 @@
-const mongoose = require('mongoose');
+const User = require('../models/userModel');
 
-const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        lowercase: true,
-        trim: true
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-        lowercase: true,
-        trim: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    role: {
-        type: String,
-        enum: ['client', 'admin'],
-        default: 'client'
+async function signupController(req, res){
+    const {name, email, password} = req.body;
+    const newUser = {
+        nameVal: name,
+        emailVal: email,
+        passwordVal: password,
+        role: 'client'
+    };
+
+    try{
+        const user = new User(newUser);
+        await user.save();
+        req.session.userId = user._id;
+        res.status(202).send('success');
+    }catch(e){
+        if(e.code === 1100){
+            res.status(409).send('email already registered');
+        }else{
+            console.log(e.message);
+            res.status(500).send(error);
+        }
     }
-}, {timestamps: true});
+};
 
-const User = mongoose.model('User', userSchema);
-module.exports = User;
+async function loginController(req, res){
+    
+};
