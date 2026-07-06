@@ -3,9 +3,9 @@ const User = require('../models/userModel');
 async function signupController(req, res){
     const {name, email, password} = req.body;
     const newUser = {
-        nameVal: name,
-        emailVal: email,
-        passwordVal: password,
+        name: name,
+        email: email,
+        password: password,
         role: 'client'
     };
 
@@ -25,5 +25,20 @@ async function signupController(req, res){
 };
 
 async function loginController(req, res){
+    const {email, password} = req.body;
     
+    try{
+        const user = await User.find({email: email, password: password});
+        if(user){
+            req.session.userId = user._id
+            res.status(200).send('exists');
+        }else{
+            throw new Error('User doesnt exist');
+        }
+    }catch(e){
+        console.log(e.message)
+        res.status(500).send('server error');
+    }
 };
+
+module.exports = {signupController, loginController};

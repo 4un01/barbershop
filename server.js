@@ -1,11 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
-const MongoStore = require('connect-mongo');
+const {MongoStore} = require('connect-mongo');
 const authRoute = require('./routes/authRoute');
 
 const app = express();
 const PORT = process.env.PORT;
+const SECRET = process.env.SECRET;
 const connectionString = process.env.MONGO_CONNECTION_STRING
 
 mongoose.connect(connectionString)
@@ -18,7 +19,7 @@ app.use(express.json());
 app.use(express.text());
 
 app.use(session({
-    seceret: process.env.SECERET,
+    secret: SECRET,
     saveUninitialized: false,
     resave: false,
     store: MongoStore.create({client: mongoose.connection.getClient()}),

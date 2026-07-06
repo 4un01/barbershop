@@ -1,5 +1,6 @@
 const signupLink = document.getElementById('signupLink')
 const loginLink = document.getElementById('loginLink')
+const signupBtn = document.getElementById('signupBtn');
 
 function switchCards(e){
     e.preventDefault();
@@ -18,8 +19,8 @@ function switchCards(e){
 
 function getSignupDetails(){
     const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
+    const email = document.getElementById('signupEmail');
+    const password = document.getElementById('signupPass');
 
     const userDetails = {
         name: name.value,
@@ -40,7 +41,8 @@ async function sendSignupDetails(){
             body: JSON.stringify(userDetails)
         });
         if(response.ok){
-
+            const responseTxt = await response.text();
+            alert(responseTxt);
         }else{
             throw new Error('Something went wrong when signing up');
         }
@@ -51,3 +53,4 @@ async function sendSignupDetails(){
 
 signupLink.addEventListener('click', switchCards);
 loginLink.addEventListener('click', switchCards);
+signupBtn.addEventListener('click', sendSignupDetails);
