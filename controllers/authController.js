@@ -50,4 +50,12 @@ function checkIfLoggedIn(req, res){
     }
 };
 
-module.exports = {signupController, loginController, checkIfLoggedIn};
+function logout(req, res){
+    req.session.destroy(err => {
+        if(err) return res.status(500).json({loggedIn: true});
+        res.clearCookie('connect.sid');
+        res.json({loggedIn: false});
+    })
+}
+
+module.exports = {signupController, loginController, checkIfLoggedIn, logout};

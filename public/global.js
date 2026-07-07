@@ -1,5 +1,6 @@
 const menuBtn = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
+const loginBtn = document.getElementById('loginBtn');
 
 async function checkIfLoggedIn(){
     try{
@@ -7,21 +8,35 @@ async function checkIfLoggedIn(){
         if(response.ok){
             const resJson = await response.json();
             if(resJson.loggedIn){
-                const loginBtn = document.getElementById('loginBtn');
                 loginBtn.textContent = 'Log Out';
                 loginBtn.href = '';
                 loginBtn.addEventListener('click', logout);
             }
         }else{
             loginBtn.textContent = 'Log In';
+            loginBtn.href = './auth.html';
+            return loginBtn.removeEventListener('click', logout);
         }
     }catch(e){
         console.log(e.message);
     }
 }
 
-function logout(){
+async function logout(e){
+    e.preventDefault();
     
+    try{
+        const response = await fetch('/auth/logout', {method: 'DELETE'});
+        const resJson = await response.json();
+        if(!resJson.loggedIn){
+            loginBtn.textContent = 'Log In';
+            loginBtn.href = './auth.html';
+            return loginBtn.removeEventListener('click', logout);
+            window.location.href = '/';
+        }
+    }catch(e){
+        console.log(e.message)
+    }
 }
 
 

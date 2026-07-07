@@ -43,7 +43,9 @@ async function sendSignupDetails(){
         });
         if(response.ok){
             const responseTxt = await response.text();
-            alert(responseTxt);
+            if(responseTxt === 'success'){
+                window.location.href = '/';
+            }
         }else{
             throw new Error('Something went wrong when signing up');
         }
@@ -74,7 +76,11 @@ async function sendLoginDetails(){
         });
         if(response.ok){
             const responseTxt = await response.text();
-            alert(responseTxt);
+            if(responseTxt === 'exists'){
+                window.location.href = '/';
+            }else{
+                throw new Error();
+            }
         }
     }catch(e){
         console.log(e.message);
