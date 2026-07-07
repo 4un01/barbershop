@@ -42,4 +42,12 @@ async function loginController(req, res){
     }
 };
 
-module.exports = {signupController, loginController};
+function checkIfLoggedIn(req, res){
+    if(req.session.userId){
+        res.status(200).json({loggedIn: true});
+    }else{
+        res.status(404).json({loggedIn: false});
+    }
+};
+
+module.exports = {signupController, loginController, checkIfLoggedIn};
