@@ -25,6 +25,9 @@
     font-family: 'Archivo Black';
     font-size: 1.3em;
 }
+#prev, #nxt{
+    cursor: pointer;
+}
 .days{
     width: 100%;
     display: grid;
@@ -35,7 +38,6 @@
     font-family: 'Inter';
     font-size: 1.2em;
     font-weight: bold;
-    cursor: pointer;
 }
 .day{
     width: 40px;
@@ -45,6 +47,7 @@
     align-items: center;
     padding: 0;
     margin-right: 3px;
+    cursor: pointer;
 }
 .day:hover{
     background-color: hsl(31, 20%, 40%);
@@ -63,6 +66,7 @@
     padding: 0;
     margin-right: 3px;
     color: #FE6E2B;
+    cursor: pointer;
 }
 .daysBefore:hover{
     background-color: hsl(31, 20%, 40%);
@@ -77,6 +81,7 @@
     padding: 0;
     margin-right: 3px;
     color: #FE6E2B;
+    cursor: pointer;
 }
 .daysAfter:hover{
     background-color: hsl(31, 20%, 40%);
