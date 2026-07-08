@@ -1,5 +1,6 @@
 const days = document.querySelector('.days');
 const today = new Date();
+const currentDate = new Date();
 const monthAndYear = document.getElementById('monthAndYear');
 const months = [
     'January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August',
@@ -43,7 +44,7 @@ function addDaysOfWeek(){
 function addDaysBefore(firstDay, lastDatePrevMonth){
     for(let j = firstDay; j > 0; j--){
         const daysBefore = document.createElement('p');
-        daysBefore.textContent = lastDatePrevMonth - j;
+        daysBefore.textContent = lastDatePrevMonth - j + 1;
         daysBefore.classList.add('daysBefore');
         days.appendChild(daysBefore);
     };
@@ -77,10 +78,10 @@ function addDaysAfter(lastDay){
 
 calender(today);
 prevBtn.addEventListener('click', () => {
-    today.setMonth(today.getMonth() - 1);
-    calender(today);
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    calender(currentDate);
 });
 nextBtn.addEventListener('click', () => {
-    today.setMonth(today.getMonth() + 1);
-    calender(today);
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    calender(currentDate);
 });
