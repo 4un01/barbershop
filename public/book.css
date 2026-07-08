@@ -1,0 +1,51 @@
+.calenderContainer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+}
+.calender{
+    width: 470px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.monthYear{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Archivo Black';
+    font-size: 1.3em;
+}
+.days{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.day{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 3px;
+}
+.day:hover{
+    background-color: hsl(31, 20%, 40%);
+    border-radius: 100%;
+}
