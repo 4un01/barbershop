@@ -34,6 +34,7 @@
     align-items: center;
     font-family: 'Inter';
     font-size: 1.2em;
+    font-weight: bold;
     cursor: pointer;
 }
 .day{
@@ -50,6 +51,34 @@
     border-radius: 100%;
 }
 .today{
+    background-color: hsl(31, 20%, 40%);
+    border-radius: 100%;
+}
+.daysBefore{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 3px;
+    color: #FE6E2B;
+}
+.daysBefore:hover{
+    background-color: hsl(31, 20%, 40%);
+    border-radius: 100%;
+}
+.daysAfter{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 3px;
+    color: #FE6E2B;
+}
+.daysAfter:hover{
     background-color: hsl(31, 20%, 40%);
     border-radius: 100%;
 }
