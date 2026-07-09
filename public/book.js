@@ -67,7 +67,8 @@ function addDays(lastDate, month, year){
         day.classList.add('day');
         if(i === today.getDate() && month === today.getMonth() && year === today.getFullYear()){
             day.id = 'today';
-        } 
+        }
+        day.addEventListener('click', () => selectToday(day)); 
         days.appendChild(day);
     };
     return;
@@ -82,6 +83,13 @@ function addDaysAfter(lastDay){
         daysAfter.classList.add('daysAfter');
         days.appendChild(daysAfter);
     };
+    return;
+}
+
+function selectToday(day){
+    const currentToday = document.getElementById('today');
+    currentToday.removeAttribute('id');
+    day.id = 'today';
     return;
 }
 
