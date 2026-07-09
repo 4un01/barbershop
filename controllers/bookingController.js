@@ -51,4 +51,8 @@ async function bookTime(req, res){
     }
 }
 
-module.exports = {getAvailableTimes, bookTime};
+async function getBookings(req, res){
+
+}
+
+module.exports = {getAvailableTimes, bookTime, getBookings};

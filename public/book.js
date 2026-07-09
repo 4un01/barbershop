@@ -9,7 +9,7 @@ const months = [
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('nxt');
 
-async function checkIfUserCanBook(){
+async function checkIfUserCanAccessPage(){
     const res = await checkIfLoggedIn();
     if(!res){
         window.location.href = '/auth.html';
@@ -17,7 +17,6 @@ async function checkIfUserCanBook(){
         return;
     }
 }
-
 
 function calender(date){
     days.textContent = '';
