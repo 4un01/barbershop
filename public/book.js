@@ -150,7 +150,7 @@ async function bookTime(hour, date){
     try{
         const response = await fetch('/booking/book', {
             method: 'POST',
-            headers: {'Content-Type': 'applicatrion/json'},
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({startsAt: bookingDateAndTime})
         });
 
