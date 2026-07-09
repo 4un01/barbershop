@@ -167,9 +167,13 @@ checkIfUserCanBook();
 calender(today);
 prevBtn.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
+    const bookingTimeContainer = document.querySelector('.bookingTimeContainer');
+    bookingTimeContainer.style.display = 'none';
     calender(currentDate);
 });
 nextBtn.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() + 1);
+    const bookingTimeContainer = document.querySelector('.bookingTimeContainer');
+    bookingTimeContainer.style.display = 'none';
     calender(currentDate);
 });
