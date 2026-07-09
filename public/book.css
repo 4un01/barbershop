@@ -136,4 +136,8 @@
     color: white;
     font-family: 'Inter';
     font-size: 1.5em;
+    cursor: pointer;
+}
+.times:hover{
+    background-color: #2B2725;
 }

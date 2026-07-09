@@ -71,7 +71,7 @@ function addDays(lastDate, month, year){
             const date = new Date(year, month, i);
             getBookingTimes(date);
         }
-        day.addEventListener('click', () => selectToday(day)); 
+        day.addEventListener('click', () => selectToday(day, month, year)); 
         days.appendChild(day);
     };
     return;
@@ -90,13 +90,14 @@ function addDaysAfter(lastDay){
     return;
 }
 
-function selectToday(day){
+function selectToday(day, month, year){
     const currentToday = document.getElementById('today');
         if(currentToday){
         currentToday.removeAttribute('id');
     }
     day.id = 'today';
-    getBookingTimes(day);
+    const date = new Date(year, month, day.textContent);
+    getBookingTimes(date);
 }
 
 function selectTodayBefore(daysBefore){
@@ -115,8 +116,8 @@ async function getBookingTimes(date){
     try{
         const response = await fetch('/booking/times', {
             method: 'POST',
-            headers: {'Content-Type': 'plain/text'},
-            body: date
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({date: date})
         });
 
         if(response.ok){
@@ -130,6 +131,7 @@ async function getBookingTimes(date){
                 const time = document.createElement('div');
                 time.textContent = hour;
                 time.classList.add('times');
+                time.addEventListener('click', () => bookTime(hour, date));
                 bookingTimes.appendChild(time);
             });
         }else{
@@ -137,6 +139,28 @@ async function getBookingTimes(date){
         }
     }catch(e){
         console.log(e.message);
+    }
+}
+
+async function bookTime(hour, date){
+    const [h, m] = hour.split(':');
+    const bookingDateAndTime = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    bookingDateAndTime.setHours(h, m, 0, 0);
+
+    try{
+        const response = await fetch('/booking/book', {
+            method: 'POST',
+            headers: {'Content-Type': 'applicatrion/json'},
+            body: JSON.stringify({startsAt: bookingDateAndTime})
+        });
+
+        if(response.ok){
+            
+        }else{
+            throw new Error();
+        }
+    }catch(e){
+        console.log(e.message)
     }
 }
 
