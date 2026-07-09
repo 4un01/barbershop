@@ -55,6 +55,7 @@ function addDaysBefore(firstDay, lastDatePrevMonth){
         const daysBefore = document.createElement('p');
         daysBefore.textContent = lastDatePrevMonth - j + 1;
         daysBefore.classList.add('daysBefore');
+        daysBefore.addEventListener('click', () => selectTodayBefore(daysBefore));
         days.appendChild(daysBefore);
     };
     return;
@@ -81,6 +82,7 @@ function addDaysAfter(lastDay){
         const daysAfter = document.createElement('p');
         daysAfter.textContent = nextMonthsDateCount;
         daysAfter.classList.add('daysAfter');
+        daysAfter.addEventListener('click', () => selectTodayAfter(daysAfter));
         days.appendChild(daysAfter);
     };
     return;
@@ -88,9 +90,22 @@ function addDaysAfter(lastDay){
 
 function selectToday(day){
     const currentToday = document.getElementById('today');
-    currentToday.removeAttribute('id');
+        if(currentToday){
+        currentToday.removeAttribute('id');
+    }
     day.id = 'today';
-    return;
+}
+
+function selectTodayBefore(daysBefore){
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    const thisDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), daysBefore.textContent);
+    calender(thisDate); 
+}
+
+function selectTodayAfter(daysAfter){
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    const thisDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), daysAfter.textContent);
+    calender(thisDate); 
 }
 
 checkIfUserCanBook();

@@ -33,8 +33,8 @@ async function logout(e){
         if(!resJson.loggedIn){
             loginBtn.textContent = 'Log In';
             loginBtn.href = './auth.html';
-            return loginBtn.removeEventListener('click', logout);
-            window.location.href = '/';
+            loginBtn.removeEventListener('click', logout);
+            return window.location.href = '/';
         }
     }catch(e){
         console.log(e.message)
