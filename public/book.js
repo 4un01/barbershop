@@ -103,12 +103,16 @@ function selectToday(day, month, year){
 function selectTodayBefore(daysBefore){
     currentDate.setMonth(currentDate.getMonth() - 1);
     const thisDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), daysBefore.textContent);
+    const bookingTimeContainer = document.querySelector('.bookingTimeContainer');
+    bookingTimeContainer.style.display = 'none';
     calender(thisDate); 
 }
 
 function selectTodayAfter(daysAfter){
     currentDate.setMonth(currentDate.getMonth() + 1);
     const thisDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), daysAfter.textContent);
+    const bookingTimeContainer = document.querySelector('.bookingTimeContainer');
+    bookingTimeContainer.style.display = 'none';
     calender(thisDate); 
 }
 
