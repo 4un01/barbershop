@@ -30,6 +30,7 @@ app.use(session({
 }));
 
 app.use('/auth', authRoute);
+app.use('/booking', )
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port: ${PORT}`);

@@ -108,6 +108,24 @@ function selectTodayAfter(daysAfter){
     calender(thisDate); 
 }
 
+async function getBookingTimes(date){
+    try{
+        const response = await fetch('/booking/times', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        });
+
+        if(response.ok){
+
+        }else{
+            throw new Error('Something went wrong in the getBookingTimes Function');
+        }
+    }catch(e){
+        console.log(e.message);
+    }
+}
+
 checkIfUserCanBook();
 calender(today);
 prevBtn.addEventListener('click', () => {
