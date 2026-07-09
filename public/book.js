@@ -68,6 +68,8 @@ function addDays(lastDate, month, year){
         day.classList.add('day');
         if(i === today.getDate() && month === today.getMonth() && year === today.getFullYear()){
             day.id = 'today';
+            const date = new Date(year, month, i);
+            getBookingTimes(date);
         }
         day.addEventListener('click', () => selectToday(day)); 
         days.appendChild(day);
@@ -94,6 +96,7 @@ function selectToday(day){
         currentToday.removeAttribute('id');
     }
     day.id = 'today';
+    getBookingTimes(day);
 }
 
 function selectTodayBefore(daysBefore){
@@ -112,12 +115,23 @@ async function getBookingTimes(date){
     try{
         const response = await fetch('/booking/times', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data)
+            headers: {'Content-Type': 'plain/text'},
+            body: date
         });
 
         if(response.ok){
-
+            const availableHours = await response.json();
+            const bookingTimeContainer = document.querySelector('.bookingTimeContainer');
+            bookingTimeContainer.style.display = 'flex';
+            const timeContainer = document.querySelector('.timeContainer');
+            timeContainer.textContent = '';
+            const bookingTimes = document.querySelector('.bookingTimes');
+            availableHours.forEach(hour => {
+                const time = document.createElement('div');
+                time.textContent = hour;
+                time.classList.add('times');
+                bookingTimes.appendChild(time);
+            });
         }else{
             throw new Error('Something went wrong in the getBookingTimes Function');
         }

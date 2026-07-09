@@ -108,7 +108,7 @@
     border-radius: 100%;
 }
 
-.timeContainer{
+.bookingTimeContainer{
     width: 100%;
     display: none;
     justify-content: center;
@@ -124,7 +124,7 @@
     align-items: flex-start;
     gap: 20px;
 }
-.timeContainer h3{
+.bookingTimeContainer h3{
     font-family: 'Bebas Neue';
     font-size: 3em;
     margin-bottom: 5px;
