@@ -57,7 +57,7 @@ function addDays(lastDate, month, year){
         day.textContent = i;
         day.classList.add('day');
         if(i === today.getDate() && month === today.getMonth() && year === today.getFullYear()){
-            day.classList.add('today');
+            day.id = 'today';
         } 
         days.appendChild(day);
     };
