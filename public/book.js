@@ -9,6 +9,15 @@ const months = [
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('nxt');
 
+async function checkIfUserCanBook(){
+    const res = await checkIfLoggedIn();
+    if(!res){
+        window.location.href = '/auth.html';
+    }else{
+        return;
+    }
+}
+
 
 function calender(date){
     days.textContent = '';
@@ -76,6 +85,7 @@ function addDaysAfter(lastDay){
     return;
 }
 
+checkIfUserCanBook();
 calender(today);
 prevBtn.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);

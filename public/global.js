@@ -11,11 +11,13 @@ async function checkIfLoggedIn(){
                 loginBtn.textContent = 'Log Out';
                 loginBtn.href = '';
                 loginBtn.addEventListener('click', logout);
+                return true;
             }
         }else{
             loginBtn.textContent = 'Log In';
             loginBtn.href = './auth.html';
-            return loginBtn.removeEventListener('click', logout);
+            loginBtn.removeEventListener('click', logout);
+            return false;
         }
     }catch(e){
         console.log(e.message);
@@ -42,4 +44,4 @@ async function logout(e){
 
 checkIfLoggedIn();
 menuBtn.addEventListener('click', () => {document.querySelector('.sidebar').style.display = 'flex';});
-closeBtn.addEventListener('click', () => {document.querySelector('.sidebar').style.display = 'none';})
+closeBtn.addEventListener('click', () => {document.querySelector('.sidebar').style.display = 'none';});
