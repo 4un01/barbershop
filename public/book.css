@@ -129,6 +129,14 @@
     font-size: 3em;
     margin-bottom: 5px;
 }
+.timeContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
 .times{
     width: 100%;
     padding: 20px;

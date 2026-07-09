@@ -126,13 +126,12 @@ async function getBookingTimes(date){
             bookingTimeContainer.style.display = 'flex';
             const timeContainer = document.querySelector('.timeContainer');
             timeContainer.textContent = '';
-            const bookingTimes = document.querySelector('.bookingTimes');
             availableHours.forEach(hour => {
                 const time = document.createElement('div');
                 time.textContent = hour;
                 time.classList.add('times');
                 time.addEventListener('click', () => bookTime(hour, date));
-                bookingTimes.appendChild(time);
+                timeContainer.appendChild(time);
             });
         }else{
             throw new Error('Something went wrong in the getBookingTimes Function');
@@ -155,7 +154,7 @@ async function bookTime(hour, date){
         });
 
         if(response.ok){
-            
+            window.location.href = './myBookings'
         }else{
             throw new Error();
         }
