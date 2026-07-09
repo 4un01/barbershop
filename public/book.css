@@ -1,3 +1,21 @@
+.bookHero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2B2725;
+    color: white;
+}
+.bookHero h1{
+    font-family: 'Archivo Black';
+    font-size: 6em;
+}
+.bookHero h3{
+    font-family: 'Bebas Neue';
+    font-size: 1.9em;
+    margin-top: -30px;
+}
+
 .calenderContainer{
     width: 100%;
     height: fit-content;
