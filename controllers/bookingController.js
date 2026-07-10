@@ -52,7 +52,39 @@ async function bookTime(req, res){
 }
 
 async function getBookings(req, res){
+    const userId = req.session.userId;
+    const bookingsInfo = [];
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+    const months = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
+        'Sep', 'Oct', 'Nov', 'Dec' 
+    ];
 
+    try{
+        const bookings = await Booking.find({user: userId});
+
+        bookings.forEach(booking => {
+            const dateObject = booking.startsAt;
+            const rawTime = dateObject.toTimeString();
+            const time = rawTime.slice(0, 5);
+            const date = dateObject.getDate();
+            const month = months[dateObject.getMonth()];
+            const day = daysOfWeek[dateObject.getDay()];
+
+            const bookingInfo = {
+                day: day,
+                date: date,
+                month: month,
+                time: time
+            };
+            bookingsInfo.push(bookingInfo);
+        });
+        
+        res.status(200).json(bookingsInfo);
+    }catch(e){
+        console.log(e.message);
+        res.status(500).send();
+    }
 }
 
 module.exports = {getAvailableTimes, bookTime, getBookings};

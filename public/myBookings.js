@@ -9,8 +9,10 @@ async function getBookings(){
         const response = await fetch('/booking/myBookings');
 
         if(response.ok){
-            const bookingInfo = await response.json();
-            renderBookings(bookingInfo);
+            const bookingsInfo = await response.json();
+            bookingsInfo.forEach(bookingInfo => {
+                renderBookings(bookingInfo);
+            });
         }else{
             throw new Error();
         }
@@ -26,28 +28,31 @@ function renderBookings(bookingInfo){
     const booking = document.createElement('div');
     booking.classList.add('booking');
     myBookings.appendChild(booking);
-    const date = document.createElement('div');
-    date.classList.add('date');
-    booking.appendChild(date);
+
+    const dateDiv = document.createElement('div');
+    dateDiv.classList.add('date');
+    booking.appendChild(dateDiv);
+
     const timeDiv = document.createElement('div');
     timeDiv.classList.add('time');
     booking.appendChild(timeDiv);
 
     const dayDOM = document.createElement('p');
     dayDOM.textContent = day;
-    date.appendChild(dayDOM);
+    dateDiv.appendChild(dayDOM);
 
     const dateDOM = document.createElement('h4');
     dateDOM.textContent = date;
-    date.appendChild(dateDOM);
+    dateDiv.appendChild(dateDOM);
 
     const monthDOM = document.createElement('p');
     monthDOM.textContent = month;
-    date.appendChild(monthDOM);
+    dateDiv.appendChild(monthDOM);
 
     const timeDOM = document.createElement('h4');
-    timeDOM,textContent = time;
+    timeDOM.textContent = time;
     timeDiv.appendChild(timeDOM);
 }
 
 checkIfUserCanAccessPage();
+getBookings();

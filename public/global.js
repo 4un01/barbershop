@@ -41,6 +41,15 @@ async function logout(e){
     }
 }
 
+async function checkIfUserCanAccessPage(){
+    const res = await checkIfLoggedIn();
+    if(!res){
+        window.location.href = '/auth.html';
+    }else{
+        return;
+    }
+}
+
 
 checkIfLoggedIn();
 menuBtn.addEventListener('click', () => {document.querySelector('.sidebar').style.display = 'flex';});

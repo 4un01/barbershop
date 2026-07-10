@@ -30,8 +30,8 @@ main{
 
 
 .myBookings{
-    background-color: black;
     width: 30%;
+    height: fit-content;
     color: white;
     display: flex;
     flex-direction: column;
@@ -40,6 +40,7 @@ main{
     gap: 10px;
 }
 .booking{
+    background-color: black;
     width: 100%;
     display: flex;
     justify-content: space-between;
