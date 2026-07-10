@@ -11,11 +11,13 @@ async function checkIfLoggedIn(){
                 loginBtn.textContent = 'Log Out';
                 loginBtn.href = '';
                 loginBtn.addEventListener('click', logout);
+                return true;
             }
         }else{
             loginBtn.textContent = 'Log In';
             loginBtn.href = './auth.html';
-            return loginBtn.removeEventListener('click', logout);
+            loginBtn.removeEventListener('click', logout);
+            return false;
         }
     }catch(e){
         console.log(e.message);
@@ -31,15 +33,24 @@ async function logout(e){
         if(!resJson.loggedIn){
             loginBtn.textContent = 'Log In';
             loginBtn.href = './auth.html';
-            return loginBtn.removeEventListener('click', logout);
-            window.location.href = '/';
+            loginBtn.removeEventListener('click', logout);
+            return window.location.href = '/';
         }
     }catch(e){
         console.log(e.message)
     }
 }
 
+async function checkIfUserCanAccessPage(){
+    const res = await checkIfLoggedIn();
+    if(!res){
+        window.location.href = '/auth.html';
+    }else{
+        return;
+    }
+}
+
 
 checkIfLoggedIn();
 menuBtn.addEventListener('click', () => {document.querySelector('.sidebar').style.display = 'flex';});
-closeBtn.addEventListener('click', () => {document.querySelector('.sidebar').style.display = 'none';})
+closeBtn.addEventListener('click', () => {document.querySelector('.sidebar').style.display = 'none';});

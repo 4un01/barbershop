@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const {MongoStore} = require('connect-mongo');
 const authRoute = require('./routes/authRoute');
+const bookingRoute = require('./routes/bookingRoute');
 
 const app = express();
 const PORT = process.env.PORT;
@@ -30,6 +31,7 @@ app.use(session({
 }));
 
 app.use('/auth', authRoute);
+app.use('/booking', bookingRoute);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port: ${PORT}`);

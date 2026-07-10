@@ -1,0 +1,151 @@
+.bookHero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2B2725;
+    color: white;
+}
+.bookHero h1{
+    font-family: 'Archivo Black';
+    font-size: 6em;
+}
+.bookHero h3{
+    font-family: 'Bebas Neue';
+    font-size: 1.9em;
+    margin-top: -30px;
+}
+
+
+.calenderContainer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+.calender{
+    width: 470px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.monthYear{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Archivo Black';
+    font-size: 1.3em;
+}
+#prev, #nxt{
+    cursor: pointer;
+}
+.days{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.day{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 3px;
+    cursor: pointer;
+}
+.day:hover{
+    background-color: hsl(31, 20%, 40%);
+    border-radius: 100%;
+}
+#today{
+    background-color: hsl(31, 20%, 40%);
+    border-radius: 100%;
+}
+.daysBefore{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 3px;
+    color: #FE6E2B;
+    cursor: pointer;
+}
+.daysBefore:hover{
+    background-color: hsl(31, 20%, 40%);
+    border-radius: 100%;
+}
+.daysAfter{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 3px;
+    color: #FE6E2B;
+    cursor: pointer;
+}
+.daysAfter:hover{
+    background-color: hsl(31, 20%, 40%);
+    border-radius: 100%;
+}
+
+.bookingTimeContainer{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+.bookingTimes{
+    width: 508px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+.bookingTimeContainer h3{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+.timeContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.times{
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-family: 'Inter';
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.times:hover{
+    background-color: #2B2725;
+}

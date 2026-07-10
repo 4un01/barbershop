@@ -1,0 +1,57 @@
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+.myBookingsHero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2B2725;
+    color: white;
+}
+.myBookingsHero h1{
+    font-family: 'Archivo Black';
+    font-size: 6em;
+}
+.myBookingsHero h3{
+    font-family: 'Bebas Neue';
+    font-size: 1.9em;
+    margin-top: -30px;
+}
+
+
+.myBookings{
+    width: 30%;
+    height: fit-content;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.booking{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    font-weight: bold;
+}
+.booking h4{
+    font-size: 2.3em;
+    margin: 0;
+}
