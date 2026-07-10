@@ -128,3 +128,38 @@ main{
     text-decoration: none;
     color: #C2B3A3;
 }
+
+@media(max-width: 1024px){
+ 
+    .loginCard{
+        width: 50%;
+    }
+    .signupCard{
+        width: 50%;
+    }
+}
+ 
+ 
+@media(max-width: 768px){
+ 
+    main{
+        padding: 30px 20px;
+    }
+    .loginCard{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .signupCard{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .loginCard h1, .signupCard h1{
+        font-size: 2.2em;
+    }
+    #login, #signupBtn{
+        width: 100%;
+        font-size: 1.5em;
+    }
+}

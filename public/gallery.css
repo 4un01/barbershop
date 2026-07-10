@@ -1,0 +1,192 @@
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.galleryHero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2B2725;
+    color: white;
+    padding: 40px 20px 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.galleryHero h1{
+    font-family: 'Archivo Black';
+    font-size: clamp(2em, 6vw, 5em);
+    margin: 0;
+}
+.galleryHero h3{
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    font-size: clamp(1.3em, 3.5vw, 3.5em);
+    margin: 4px 0 0;
+}
+
+
+.galleryContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px clamp(12px, 6vw, 120px) 60px;
+    box-sizing: border-box;
+}
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+.filterBtn{
+    font-family: 'Bebas Neue';
+    font-size: clamp(1.1em, 1.8vw, 1.6em);
+    color: white;
+    background-color: #17150F;
+    border: none;
+    padding: 8px 26px;
+    cursor: pointer;
+}
+.filterBtn.active{
+    background-color: #FE6E2B;
+}
+
+
+.galleryGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+    gap: 24px;
+}
+.galleryCard{
+    background-color: #17150F;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.galleryCard img{
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+.cardLabel{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+}
+.cardLabel h2{
+    font-family: 'Bebas Neue';
+    font-size: 1.7em;
+    color: white;
+    margin: 0;
+    font-weight: 400;
+}
+.cardLabel p{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 0.75em;
+    color: #FE6E2B;
+    margin: 0;
+    letter-spacing: 1px;
+}
+.hidden{
+    display: none;
+}
+
+
+.galleryCTA{
+    width: 100%;
+    background-color: #FE6E2B;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 50px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.galleryCTA h1{
+    font-family: 'Archivo Black';
+    color: white;
+    font-size: clamp(1.5em, 3.5vw, 3em);
+    margin: 0;
+}
+.galleryCTA a{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17150F;
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+@media(max-width: 1024px){
+ 
+    .galleryContent{
+        padding: 30px clamp(12px, 4vw, 60px) 50px;
+    }
+    .galleryGrid{
+        grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+        gap: 18px;
+    }
+    .galleryCard img{
+        height: 280px;
+    }
+    .cardLabel h2{
+        font-size: 1.4em;
+    }
+}
+ 
+ 
+@media(max-width: 768px){
+ 
+    .galleryContent{
+        padding: 20px 12px 40px;
+    }
+    .filters{
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    .filterBtn{
+        font-size: 1em;
+        padding: 6px 16px;
+    }
+    .galleryGrid{
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .galleryCard{
+        padding: 10px;
+        gap: 8px;
+    }
+    .galleryCard img{
+        height: 180px;
+    }
+    .cardLabel h2{
+        font-size: 1.1em;
+    }
+    .cardLabel p{
+        font-size: 0.6em;
+    }
+    .galleryCTA a{
+        width: 120px;
+        font-size: 1.5em;
+    }
+}

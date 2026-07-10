@@ -55,3 +55,39 @@ main{
     font-size: 2.3em;
     margin: 0;
 }
+
+@media(max-width: 1024px){
+ 
+    .myBookingsHero h1{
+        font-size: 4em;
+    }
+    .myBookingsHero h3{
+        font-size: 1.5em;
+    }
+    .myBookings{
+        width: 55%;
+    }
+}
+ 
+ 
+@media(max-width: 768px){
+ 
+    .myBookingsHero h1{
+        font-size: 2.2em;
+    }
+    .myBookingsHero h3{
+        font-size: 1.1em;
+        margin-top: -15px;
+    }
+    .myBookings{
+        width: 90%;
+        gap: 15px;
+    }
+    .booking{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .booking h4{
+        font-size: 1.8em;
+    }
+}

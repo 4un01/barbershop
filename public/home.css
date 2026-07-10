@@ -222,8 +222,95 @@
 }
 
 
+@media(max-width: 1024px){
+ 
+    .heroSection h1{
+        font-size: 3.2em;
+    }
+    .heroSection h2{
+        font-size: 2.2em;
+    }
+ 
+    .ourServices{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .ourServices h1{
+        font-size: 2.2em;
+    }
+    .haircuts{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .haircuts img{
+        width: 150px;
+        height: 172px;
+    }
+    .haircutOptions{
+        width: 200px;
+        height: 340px;
+    }
+    .haircuts h2{
+        font-size: 2.2em;
+    }
+    .haircuts p{
+        font-size: 1.1em;
+    }
+ 
+    .bentoBoxContainer{
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    .bentoBox{
+        width: 100%;
+    }
+    .yourChair img{
+        width: 180px;
+        height: 225px;
+    }
+    .yourChair h1{
+        font-size: 2em;
+        width: auto;
+    }
+    .cleanCutsTxt{
+        width: auto;
+    }
+    .cleanCuts h1{
+        font-size: 2em;
+    }
+    .cleanCuts img{
+        width: 130px;
+        height: 130px;
+    }
+    .brandPartners{
+        width: auto;
+    }
+    .brandPartners h1{
+        font-size: 2em;
+    }
+    .brands img{
+        width: 150px;
+        height: 84px;
+    }
+ 
+    .reviews h1{
+        font-size: 2.2em;
+    }
+    .cardContainer{
+        width: 90%;
+        gap: 15px;
+    }
+    .card{
+        width: 100%;
+        height: fit-content;
+    }
+}
+ 
+ 
 @media(max-width: 768px){
-
+ 
     .heroSection h1{
         font-size: 1.6em;
     }
@@ -235,7 +322,7 @@
         font-size: 1em;
         padding: 1px;
     }
-
+ 
     .ourServices{
         padding-left: 3px;
         padding-right: 3px;
@@ -321,7 +408,7 @@
         height: 100%;
         object-fit: cover;
     }
-
+ 
     .reviews {
         padding-bottom: 20px;
     }

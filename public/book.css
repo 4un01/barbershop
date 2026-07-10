@@ -149,3 +149,72 @@
 .times:hover{
     background-color: #2B2725;
 }
+
+@media(max-width: 1024px){
+ 
+    .bookHero h1{
+        font-size: 4em;
+    }
+    .bookHero h3{
+        font-size: 1.5em;
+    }
+    .calenderContainer{
+        padding-top: 60px;
+    }
+    .calender{
+        width: 400px;
+    }
+    .bookingTimes{
+        width: 440px;
+    }
+}
+ 
+ 
+@media(max-width: 768px){
+ 
+    .bookHero h1{
+        font-size: 2.2em;
+    }
+    .bookHero h3{
+        font-size: 1.1em;
+        margin-top: -15px;
+    }
+    .calenderContainer{
+        padding-top: 30px;
+        padding-left: 12px;
+        padding-right: 12px;
+        box-sizing: border-box;
+    }
+    .calender{
+        width: 100%;
+        max-width: 360px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .monthYear{
+        font-size: 1.1em;
+    }
+    .days{
+        font-size: 1em;
+    }
+    .day, .daysBefore, .daysAfter{
+        width: 34px;
+        height: 34px;
+        margin-right: 0;
+    }
+    .timeContainer{
+        margin-top: 20px;
+        padding-left: 12px;
+        padding-right: 12px;
+        box-sizing: border-box;
+    }
+    .bookingTimes{
+        width: 100%;
+        max-width: 360px;
+        gap: 12px;
+    }
+    .times{
+        padding: 15px;
+        font-size: 1.2em;
+    }
+}
